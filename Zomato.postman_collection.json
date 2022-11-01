@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "686e6819-311b-4de6-8af0-72ae5a98c01c",
+		"name": "Zomato",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22458418"
+	},
+	"item": [
+		{
+			"name": "FilterApi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Cuisine\":[\"North Indian\"],\n    \"sort\":{\"cost\":-1},\n    \"lcost\":500,\n    \"hcost\":1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2070/restaurant/filter/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2070",
+					"path": [
+						"restaurant",
+						"filter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CityNameApi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Gulab\",\n    \"city_name\":\"Delhi\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/restaurant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductsApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/Gulab",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"Gulab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestaurantsAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/restaurant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestaurantsByCityNameAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/restaurant/Delhi",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant",
+						"Delhi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LocationAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/location",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LocationNameAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/location/Pune",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"location",
+						"Pune"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:2070"
+		}
+	]
+}
